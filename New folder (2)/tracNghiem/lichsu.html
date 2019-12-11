@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trắc nghiệm </title>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css.css">
+</head>
+
+<body>
+  <!--header-->
+  <div class="container-fluid bg-dark" style="height: 120px;">
+      <div class="row">
+          <div class="col-sm-2 text-center">
+              <a href="trang_chu.html">
+                  <img src="../img-de-an/book.jpg" alt="logo" class="bieu-tuong">
+              </a>
+          </div>
+          <div class="col-sm-8">
+              <nav class="navbar navbar-expand-sm bg-muted navbar-dark justify-content-center"
+                  style="padding-top: 50px">
+                  <!-- Toggler/collapsibe Button -->
+                  <button class="navbar-toggler" type="button" data-toggle="collapse"
+                      data-target="#collapsibleNavbar">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+  
+                  <!-- Navbar links -->
+                  <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar"
+                      style="font-size: 1.5rem;">
+                      <ul class="navbar-nav">
+                          <li class="nav-item">
+                              <a class="nav-link" href="../story.html">Câu Chuyện Nổi Bật |
+                              </a>
+                          </li>
+                        
+                          <li class="nav-item">
+                              <a class="nav-link" href="../thuc_don.html">Thư Mục Sách |</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="../cua_hang.html">Thử Thách - Nhận Quà</a>
+                          </li>
+                      </ul>
+                  </div>
+              </nav>
+          </div>
+          
+      </div>
+  </div>
+
+  
+  
+            <div class="headofgroup">
+                    <h1 style="text-align: center;"> Chào mừng bạn đến với một số câu hỏi thú vị về Lịch Sử</h1>
+                </div>
+      
+ 
+    <div id="playing">
+      <div id="content">
+        <div>Câu hỏi: <span id="indexQuestion"></span> / <span id="totalQuestion"></span></div>
+        <div class="content-question-answer">
+          <div id="contentQuestion"></div>
+          <div>
+            <ol id="answerQuestion" type="A">
+
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="result-and-button">
+        <div id="rightAnswer" class="alert alert-success animated bounceIn duration-05s">
+          <div>Yeahhh! Chính xác</div>
+        </div>
+        <div id="wrongAnswer" class="alert alert-danger animated bounce">
+          <div>Trả lời không đúng</div>
+        </div>
+        <div id="needAnswer" class="alert alert-warning animated zoomIn duration-05s">
+          Chưa trả lời mà <i class="far fa-2x fa-meh"></i>
+        </div>
+        <div id="submitAnswer">
+          <button type="button" id="btnSubmitAnswer" class="btn btn-success btn-center" onclick="submitAnswer()">Kiểm tra</button>
+          <button type="button" id="btnNextQuestion" class="btn btn-primary btn-center" onclick="nextQuestion()">Kế tiếp</button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="result">
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Chúc mừng!</h4>
+        <p id="userResult"></p>
+      </div>
+      <div>
+        <button type="button" class="btn btn-primary" onclick="newGame()">New game</button>
+      </div>
+    </div>
+  </div>
+   <!--phần footer-->
+   <div class="container-fluid bg-dark footer">
+      <div class="container">
+          <div class="row" style="padding-top: 1rem;">
+              <div class="col-sm-4">
+                  <div class="container footer_title">
+                      <div>
+                          <p>Follow us at</p>
+                          <a href="https://www.facebook.com/ShopFuji.truyenonline/" target="_blank"><i
+                                  class="fab fa-facebook fa-2x"></i></a>
+                      </div>
+                      <div>
+                          <p>Rate us at</p>
+                          <a href="https://www.tripadvisor.com.vn/UserReviewEdit-g293924-d10301082-Haka_Coffee_39_Hang_Dau-Hanoi.html"
+                              target="_blank"><i class="fab fa-tripadvisor fa-2x"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-4">
+                  <div>
+                      <h3 class="footer_title">Hỗ trợ: </h3>
+                      <p class="footer_content">Hỗ trợ: 035 969 1998(07:00-21:00)</p>
+                  </div>
+              </div>
+              <div class="col-sm-4">
+                  <div>
+                      <h3 class="footer_title">Địa chỉ</h3>
+                      <p class="footer_content">
+                          39 Hàng Dầu, phường Lý Thái Tổ<br>
+                          quận Hoàn Kiếm, thành phố Hà Nội<br>
+                          035 969 1998<br>
+                          ShopSachOnline@gmail.com
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="copy_right">
+              <p class="footer_content" style="margin-bottom: 0;">Copyright <i class="far fa-copyright"></i>
+                  2019 Sach
+                  Onlne. All rights
+                  reserved.</p>
+          </div>
+      </div>
+  </div>
+
+  <script src="lichsu.js"></script>
+</body>
+
+</html>
